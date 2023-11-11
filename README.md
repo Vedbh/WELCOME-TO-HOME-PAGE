@@ -3,141 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Gaming Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1em;
+            text-align: center;
+        }
+
+        h1 {
+            color: #e74c3c;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2c3e50;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .game {
+            margin-bottom: 30px;
+        }
+
+        .download-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <style>
-   body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: silver;
-    margin: 0;
-}
 
-.calculator {
-    width: 320px;
-    text-align: center;
-    margin: 0 auto;
-    border: 1px solid #333;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-color: #333;
-    color: white;
-}
+    <header>
+        <h1>My Gaming Website</h1>
+    </header>
 
-.display {
-    background-color: #444;
-    padding: 10px;
-}
-
-#result {
-    width: 90%;
-    height: 40px;
-    border: none;
-    background-color: #444;
-    color: white;
-    font-size: 20px;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-    padding: 10px;
-    background-color: #555;
-}
-
-.btn {
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    background-color: #777;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #888;
-}
-/* Your existing CSS styles... */
-h1 {
-    font-size: 36px; /* Adjust the font size as desired */
-    color: #4a90e2; /* Choose a nice blue color for the heading text */
-    padding: 20px; /* Add some padding for spacing */
-    /* Use a bright yellow background color */
-    border-radius: 10px; /* Add rounded corners for a colorful box effect */
-    display: inline-block; /* Make it an inline-block to center-align it properly */
-}
-
-footer {
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 100px;
-    font-size: 25px;
-    max-width: 800px; /* Adjust the max-width to your preference */
-    margin: 0 auto; /* This centers the footer horizontally */
-}
-
-    </style>
-  <center><h1></h1>
-    <div class="calculator">
-        <div class="display">
-            <input type="text" id="result" value="0" disabled>
+    <main>
+        <div class="game">
+            <h2>GTA 5 (PC)</h2>
+            <p>Experience the open-world action of Grand Theft Auto V on your PC.</p>
+            <a href="https://www.rockstargames.com/gta-v" class="download-button">Download Now</a>
         </div>
-        <div class="buttons">
-            <button class="btn" onclick="clearResult()">C</button>
-            <button class="btn" onclick="appendToResult('7')">7</button>
-            <button class="btn" onclick="appendToResult('8')">8</button>
-            <button class="btn" onclick="appendToResult('9')">9</button>
-            <button class="btn" onclick="appendToResult('+')">+</button>
-            <button class="btn" onclick="appendToResult('4')">4</button>
-            <button class="btn" onclick="appendToResult('5')">5</button>
-            <button class="btn" onclick="appendToResult('6')">6</button>
-            <button class="btn" onclick="appendToResult('-')">-</button>
-            <button class="btn" onclick="appendToResult('1')">1</button>
-            <button class="btn" onclick="appendToResult('2')">2</button>
-            <button class="btn" onclick="appendToResult('3')">3</button>
-            <button class="btn" onclick="appendToResult('')"></button>
-            <button class="btn" onclick="appendToResult('0')">0</button>
-            <button class="btn" onclick="calculateResult()">=</button>
-            <button class="btn" onclick="appendToResult('/')">/</button>
-        </div><ul></ul>
-    </div><ul></ul>
+
+        <div class="game">
+            <h2>Minecraft</h2>
+            <p>Build and explore your own virtual world in Minecraft.</p>
+            <a href="https://www.minecraft.net/" class="download-button">Download Now</a>
+        </div>
+
+        <!-- Add more games as needed -->
+        <div class="game">
+            <h2>GTA YCT ( only for PC)</h2>
+            <p>Build and explore your own virtual world in Minecraft.</p>
+            <a href="https://socialclub.rockstargames.com/rockstar-games-launcher?_gl=1%2Acmv4xe%2A_ga%2AODY2ODAwMzc5LjE2OTk3MTE2MTY.%2A_ga_PJQ2JYZDQC%2AMTY5OTcxOTQzOS4yLjEuMTY5OTcxOTQ0My4wLjAuMA..&_ga=2.46888295.1773127019.1699711616-866800379.1699711616
+            " class="download-button">Download Now</a>
+        </div>
+        <div class="game">
+            <h2>BGMI</h2>
+            <p>Build and explore your own virtual world in Minecraft.</p>
+            <a href="https://www.battlegroundsmobileindia.com/" class="download-button">Download now</a>
+        </div>
+    </main>
+
     <footer>
-    𝗪𝗘𝗕 𝗗𝗘𝗩𝗟𝗢𝗣𝗘𝗥 : Ved Bhogayta
-</footer>
+        &copy; 2023 My Gaming Website
+    </footer>
 
-
-    <script>
-        let result = document.getElementById('result');
-
-function appendToResult(value) {
-    if (result.value === '0') {
-        result.value = value;
-    } else {
-        result.value += value;
-    }
-}
-
-function clearResult() {
-    result.value = '0';
-}
-
-function calculateResult() {
-    try {
-        result.value = eval(result.value);
-    } catch (error) {
-        result.value = 'Please Enter A Vaild Value';
-    }
-}
-
-    </script>
 </body>
 </html>
