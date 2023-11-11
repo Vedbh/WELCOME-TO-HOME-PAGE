@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,20 +84,25 @@
         <!-- Add more games as needed -->
         <div class="game">
             <h2>GTA YCT ( only for PC)</h2>
-            <p>Build and explore your own virtual world in Minecraft.</p>
+            <p>Grand Theft Auto: San Andreas, a classic in the GTA series, explores the crime-filled world of Carl Johnson in the fictional state of San Andreas.</p>
             <a href="https://socialclub.rockstargames.com/rockstar-games-launcher?_gl=1%2Acmv4xe%2A_ga%2AODY2ODAwMzc5LjE2OTk3MTE2MTY.%2A_ga_PJQ2JYZDQC%2AMTY5OTcxOTQzOS4yLjEuMTY5OTcxOTQ0My4wLjAuMA..&_ga=2.46888295.1773127019.1699711616-866800379.1699711616
             " class="download-button">Download Now</a>
         </div>
         <div class="game">
             <h2>BGMI</h2>
-            <p>Build and explore your own virtual world in Minecraft.</p>
+            <p>Battlegrounds Mobile India, a popular mobile battle royale game, offers an immersive gaming experience set in a virtual battleground.
+
+
+
+
+            </p>
             <a href="https://www.battlegroundsmobileindia.com/" class="download-button">Download now</a>
         </div>
+        
     </main>
 
-    <footer>
+    <center>s<footer>
         &copy; 2023 My Gaming Website
     </footer>
 
-</body>
-</html>
+
