@@ -1,189 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Services and Pricing</title>
+</head>
+<body>
 <style>
 body {
-  height: 100%;
-  min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-body {
-  display: grid;
-  place-items: center;
-  font-family: "League Spartan", system-ui, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  background-color: #212121;
-  color: #ddd;
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
 }
 
-ul {e Spartan", system-ui, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  background-color: #212121;
-  color: #ddd;
-}
-ul {e Spartan", system-ui, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  background-color: #212121;
-  color: #ddd;
+#pricing {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
 }
 
-ul {e Spartan", system-ui, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  background-color: #212121;
-  color: #ddd;
+.pricing-card {
+    background-color: silver;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center;
+    border-radius: 8px;
+    width: 30%;
 }
 
-ul {
-  list-style: none;
+.price {
+    font-size: 1.5em;
+    color: #333;
+    margin: 1em 0;
 }
 
-.main {
-  max-width: 75rem;
-  padding: 3em 1.5em;
+.original-price {
+    text-decoration: line-through;
+    color: #999;
 }
 
-.main__heading {
-  font-weight: 600;
-  font-size: 2.25em;
-  margin-bottom: 0.75em;
-  text-align: center;
-  color: #eceff1;
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.cards {
-  position: relative;
+button:hover {
+    background-color: #45a049;
 }
-
-.cards__inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5em;
-}
-
-.card {
-  --flow-space: 0.5em;
-  --hsl: var(--hue), var(--saturation), var(--lightness);
-  flex: 1 1 14rem;
-  padding: 1.5em 2em;
-  display: grid;
-  grid-template-rows: auto auto auto 1fr;
-  align-items: start;
-  gap: 1.25em;
-  color: #eceff1;
-  background-color: #2b2b2b;
-  border: 1px solid #eceff133;
-  border-radius: 15px;
-}
-
-.card:nth-child(1) {
-  --hue: 165;
-  --saturation: 82.26%;
-  --lightness: 51.37%;
-}
-
-.card:nth-child(2) {
-  --hue: 291.34;
-  --saturation: 95.9%;
-  --lightness: 61.76%;
-}
-.card:nth-child(3) {
-  --hue: 338.69;
-  --saturation: 100%;
-  --lightness: 48.04%;
-}
-
-.card__bullets {
-  line-height: 1.4;
-}
-
-.card__bullets li::before {
-  display: inline-block;
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='16' title='check' fill='%23dddddd'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z' /%3E%3C/svg%3E");
-  transform: translatey(0.25ch);
-  margin-right: 1ch;
-}
-
-.card__heading {
-  font-size: 1.05em;
-  font-weight: 600;
-}
-.card__price {
-  font-size: 1.75em;
-  font-weight: 700;
-}
-
-.flow > * + * {
-  margin-top: var(--flow-space, 1.25em);
-}
-
-.cta {
-  display: block;
-  align-self: end;
-  margin: 1em 0 0.5em 0;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background-color: #0d0d0d;
-  padding: 0.7em;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  user-select: none;
-  opacity: var(--opacity, 0);
-  -webkit-mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
-  mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
-  transition: 400ms mask ease;
-  will-change: mask;
-}
-.overlay .card {
-  background-color: hsla(var(--hsl), 0.15);
-  border-color: hsla(var(--hsl), 1);
-  box-shadow: 0 0 0 1px inset hsl(var(--hsl));
-}
-
-.overlay .cta {
-  display: block;
-  grid-row: -1;
-  width: 100%;
-  background-color: hsl(var(--hsl));
-  box-shadow: 0 0 0 1px hsl(var(--hsl));
-}
-
-:not(.overlay) > .card {
-  transition: 400ms background ease;
-  will-change: background;
-}
-
-:not(.overlay) > .card:hover {
-  --lightness: 95%;
-  background: hsla(var(--hsl), 0.1);
+li{
+    background-color: green;
 }
 </style>
+    <header>
+        <h1>I PROIVDE YOU BEST WEBSITE CREATE (PAID)</h1> 
+    </header>
 
-<main class="main flow">
-    <h1 class="main__heading">Pricing</h1>
-    <div class="main__cards cards">
-      <div class="cards__inner">
-        <div class="cards__card card">
-          <h2 class="card__heading">Songs</h2>
-          <p class="card__price">₹10.00</p>
-          <ul role="list" class="card__bullets flow">
-            <li>Slowed And Rewerb Songs</li>
-        
-          </ul>
-          <a href="https://drive.google.com/file/d/1LNkmBlaxEHMuibayQuakmapDsuNCjcPi/view?usp=drive_link" class="card__cta cta">Get Started</a>
+    <section id="pricing">
+        <div class="pricing-card">
+            <h2>Basic Plan</h2>
+            <p class="price"><span class="original-price">$30</span> $20</p>
+            <p>Great for starters</p>
+            <a href="https://wa.me/6353074867" target="_blank">DM TO BUY</a>
         </div>
+        <br>
+
+        <div class="pricing-card">
+            <h2>Standard Plan</h2>
+            <p class="price"><span class="original-price">$50</span> $30</p>
+            <p>Perfect for small businesses</p>
+            <a href="https://wa.me/6353074867" target="_blank">DM TO BUY</a>
+        </div>
+<br>
+        <div class="pricing-card">
+            <h2>Premium Plan</h2>
+            <p class="price"><span class="original-price">$80</span> $40</p>
+            <p>For advanced users</p>
+            <a href="https://wa.me/6353074867" target="_blank">DM TO BUY</a>
+        </div>
+        <ul>
+
+        </ul>
+
+    </section>
+
+   
+
+    </script>
+<header>
+    <h1> Our Simple Website</h1>
+    <p>Discover amazing things at an unbeatable price!</p>
+</header>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.price-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #333;
+    margin: 1em 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+p {
+    margin: 1em 0;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
+</style>
+<section id="pricing">
+    <div class="price-card">
+        <h2>Special Offer</h2>
+        <p class="price"><span class="original-price">$7</span> $5</p>
+        <p>Limited time discount!</p>
+<li>  <a href="https://wa.me/6353074867" target="_blank">DM TO BUY</a></li>
+    </div>
+</section>
+
