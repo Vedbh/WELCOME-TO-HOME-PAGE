@@ -106,8 +106,8 @@
     <div class="banner" id="banner">
         <h2 class="banner-title">Our Love Story To End Story!</h2>
         <div class="memories">
-            <img src="ved.jpg" alt="Your Photo" class="photo">
-            <img src="partner.jpg" alt="Girlfriend's Photo" class="photo">
+            <img src="ssnaps_61B6DB0F7AA6A3E4A93C15CB0AB7D538.jpg" alt="Your Photo" class="photo">
+            <img src="ssnaps_AC499246FAFEDF97FC2ACF96FDCCDA50.jpg" alt="Girlfriend's Photo" class="photo">
         </div>
         <div class="description">
             <p>Join us on a journey through our beautiful memories! ❤️✨</p>
