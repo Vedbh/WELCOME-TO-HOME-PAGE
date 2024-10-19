@@ -98,7 +98,23 @@
         h1{
             display: none;
         }
-        
+        .chat-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline button */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.chat-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
     </style>
 </head>
 <body>
@@ -246,6 +262,16 @@
 
 
             </p>
+            <p>
+ Just think about it once, yaar. 🤔 Maybe you're not doing the right thing. ❌ I will respect every decision you make, but if I wanted to stay distant, I wouldn't have made this website 💻, I wouldn't have tried to convince you, 💬 I wouldn’t have spoken with Malay. 🗣️ I would’ve just ended it with a simple 'bye' and 'sorry.' 🫡 But please, think about it one more time! 🙏"
+            </p>
+            <p>
+                And sorry, I got a build tools error, so I didn’t get time to develop the application 😔, but I made the website. Sorry, cutu 🥺👉🏻👈🏻."
+            </p>
+            <p>
+                Hello cutu, please review the website one more time. 🙏 Please click on the button below. 🥺👉🏻👈🏻
+            </p>
+           <center><button class="chat-button" onclick="window.location.href='https://wa.me/916353074867?text=Yeah I want to come in your life%20Ved!';">Send Review</button></center><br>
                 <center><h2>THE END</h2></center>
             <div class="chapter-nav" onclick="showChapter(4)">← Previous Chapter</div>
         </div>
